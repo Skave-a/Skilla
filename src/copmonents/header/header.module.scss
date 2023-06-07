@@ -1,0 +1,50 @@
+.header {
+  background: #ffffff;
+  box-shadow: 0px 4px 5px #e9edf3;
+  padding: 12px 0 12px 120px;
+}
+
+.headerContainer {
+  display: flex;
+}
+
+.date {
+  font-family: 'SF Pro Display', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 148%;
+  color: #899cb1;
+  margin-right: 96px;
+}
+
+.search {
+  margin-right: 56px;
+}
+
+.userBlock {
+  display: flex;
+  gap: 4px;
+  margin-right: 40px;
+  align-items: center;
+}
+
+.user {
+  font-family: 'SF Pro Display', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 21px;
+  white-space: nowrap;
+  color: #899cb1;
+}
+
+.menuUser {
+  display: flex;
+  gap: 4px;
+  margin-right: 114px;
+  align-items: center;
+}
+
+.avatar {
+  border-radius: 50px;
+}
