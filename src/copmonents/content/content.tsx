@@ -4,6 +4,7 @@ import left from '@/assets/icons/keyboard_arrow_left.svg';
 import right from '@/assets/icons/keyboard_arrow_right.svg';
 import calendar from '@/assets/icons/icon-calendar.svg';
 import { Filters } from '@/copmonents/filters/filters';
+import { Table } from '@/copmonents/table/table';
 
 export const Content = () => {
   return (
@@ -21,6 +22,7 @@ export const Content = () => {
         </div>
       </div>
       <Filters />
+      <Table />
     </div>
   );
 };

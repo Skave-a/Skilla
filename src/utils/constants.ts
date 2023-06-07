@@ -138,3 +138,40 @@ export const FILTERS = [
     title: 'Все ошибки',
   },
 ];
+
+export const TABLE_HEADERS = [
+  {
+    id: 0,
+    title: 'Тип',
+    p: '30px',
+  },
+  {
+    id: 1,
+    title: 'Время',
+    p: '48px',
+  },
+  {
+    id: 2,
+    title: 'Сотрудник',
+    p: '60px',
+  },
+  {
+    id: 3,
+    title: 'Звонок',
+    p: '281px',
+  },
+  {
+    id: 4,
+    title: 'Источник',
+    p: '154px',
+  },
+  {
+    id: 5,
+    title: 'Оценка',
+    p: '414px',
+  },
+  {
+    id: 6,
+    title: 'Длительность',
+  },
+];

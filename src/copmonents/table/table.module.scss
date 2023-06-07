@@ -1,0 +1,25 @@
+.table {
+  background: #ffffff;
+  box-shadow: 0px 4px 5px #e9edf3;
+  border-radius: 8px;
+  padding: 26px 0 57px 40px;
+}
+
+.tableHeader {
+  font-family: 'SF Pro Display', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  color: #899cb1;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eaf0fa;
+}
+
+.tr > td {
+  border-bottom: 1px solid #eaf0fa;
+}
+
+.td {
+  padding: 17px 0 16px;
+}
