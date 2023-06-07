@@ -1,6 +1,7 @@
 import { Sidebar } from '@/copmonents/sidebar/sidebar';
 import { Header } from '@/copmonents/header/header';
 import styles from './main.module.scss';
+import { Content } from '@/copmonents/content/content';
 
 export const Main = (): JSX.Element => {
   return (
@@ -8,6 +9,7 @@ export const Main = (): JSX.Element => {
       <Sidebar />
       <main>
         <Header />
+        <Content />
       </main>
     </div>
   );
