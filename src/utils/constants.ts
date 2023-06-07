@@ -111,3 +111,30 @@ export const CALL_ANALYTICS = [
     color: '#EA1A4F',
   },
 ];
+
+export const FILTERS = [
+  {
+    id: 0,
+    title: 'Все типы',
+  },
+  {
+    id: 1,
+    title: 'Все сотрудники',
+  },
+  {
+    id: 2,
+    title: 'Все звонки',
+  },
+  {
+    id: 3,
+    title: 'Все источники',
+  },
+  {
+    id: 4,
+    title: 'Все оценки',
+  },
+  {
+    id: 5,
+    title: 'Все ошибки',
+  },
+];

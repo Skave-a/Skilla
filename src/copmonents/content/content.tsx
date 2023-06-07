@@ -3,6 +3,7 @@ import plus from '@/assets/bntIcons/plus.svg';
 import left from '@/assets/icons/keyboard_arrow_left.svg';
 import right from '@/assets/icons/keyboard_arrow_right.svg';
 import calendar from '@/assets/icons/icon-calendar.svg';
+import { Filters } from '@/copmonents/filters/filters';
 
 export const Content = () => {
   return (
@@ -19,6 +20,7 @@ export const Content = () => {
           <img src={right} alt="right" />
         </div>
       </div>
+      <Filters />
     </div>
   );
 };
