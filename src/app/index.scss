@@ -9,9 +9,22 @@ a {
   color: #ffffff;
 }
 
-// .container {
-// width: 1445px;
-// }
+.container {
+  width: 1445px;
+}
+
+#root {
+  background: #f1f4f9;
+}
+
+li {
+  list-style-type: none;
+}
+
+ul {
+  margin-left: 0;
+  padding-left: 0;
+}
 
 // #root {
 //   max-width: 1280px;
