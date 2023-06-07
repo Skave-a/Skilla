@@ -13,8 +13,8 @@ export const Sidebar = () => {
       <img src={logo} alt="logo" className={styles.logo} />
       <div className={styles.menu}>
         {MENU.map((item) => (
-          <NavLink to={item.link} className={setActive}>
-            <img src={item.icon} alt={item.name} className={styles.menuItemIcon}/>
+          <NavLink to={item.link} className={setActive} key={item.id}>
+            <img src={item.icon} alt={item.name} className={styles.menuItemIcon} />
             {item.name}
             <span className={styles.dot}></span>
           </NavLink>

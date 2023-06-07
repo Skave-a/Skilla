@@ -1,0 +1,24 @@
+.blockAnalytics {
+  display: flex;
+  gap: 56px;
+  margin-right: 189px;
+}
+
+.progressLine {
+  content: '';
+  background-color: #dee6f5;
+  height: 6px;
+  width: 156px;
+  border-radius: 12px;
+  position: absolute;
+}
+
+.title {
+  font-family: 'SF Pro Display';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 148%;
+  color: #122945;
+  margin-bottom: 7px;
+}

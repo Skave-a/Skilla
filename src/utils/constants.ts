@@ -90,3 +90,24 @@ export const MENU_BNTS = [
     link: '/',
   },
 ];
+
+export const CALL_ANALYTICS = [
+  {
+    id: 0,
+    text: 'Новые звонки ',
+    dedicatedText: '20 из 30 шт',
+    color: '#28A879',
+  },
+  {
+    id: 1,
+    text: 'Качество разговоров ',
+    dedicatedText: '40%',
+    color: '#FFD500',
+  },
+  {
+    id: 2,
+    text: 'Конверсия в заказ ',
+    dedicatedText: '67%',
+    color: '#EA1A4F',
+  },
+];
