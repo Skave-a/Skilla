@@ -12,9 +12,19 @@ export const Score = ({ score }: { score: string }) => {
   const text = score === 'Отлично' ? 'Отлично' : score === 'Хорошо' ? 'Хорошо' : 'Плохо';
 
   return (
-    <>
+    <div style={{marginTop: '-6px'}}>
       <div className={styles.dots}>{dots}</div>
-      <p style={{ color: color, background: colorBack }} className={styles.text}>{text}</p>
-    </>
+      <span
+        style={{
+          color: color,
+          background: colorBack,
+          border: `1px solid ${color}`,
+          borderRadius: '4px',
+        }}
+        className={styles.text}
+      >
+        {text}
+      </span>
+    </div>
   );
 };

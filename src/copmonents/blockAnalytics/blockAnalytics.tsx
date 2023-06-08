@@ -12,7 +12,7 @@ export const BlockAnalytics = () => {
           <div className={styles.progressLine}>
             <div
               className={styles.progressLine}
-              style={{ width: '45%', background: item.color }}
+              style={{ width: '51%', background: item.color }}
             ></div>
           </div>
         </div>

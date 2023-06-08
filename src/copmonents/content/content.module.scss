@@ -24,7 +24,7 @@
   justify-content: flex-end;
   gap: 48px;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 34px;
 }
 
 .balance {
@@ -47,12 +47,79 @@
 }
 
 .days {
-  margin-left: 8px;
   color: #005ff8;
-
   font-family: 'SF Pro Display', sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 16px;
   letter-spacing: 0em;
+  width: 52px;
+  margin-left: 7px;
+  margin-top: 4px;
 }
+
+.balanceT {
+  margin-left: -5px;
+    margin-right: -3px;
+}
+// .date-picker {
+//   position: relative;
+// }
+
+// #calendar-input {
+//   display: none;
+// }
+
+// #calendar-icon {
+//   position: absolute;
+//   right: 0;
+//   top: 0;
+//   height: 100%;
+//   width: 32px;
+//   background: url(calendar-icon.png);
+//   background-size: cover;
+//   border: none;
+//   cursor: pointer;
+// }
+
+// .calendar-container {
+//   position: absolute;
+//   top: 100%;
+//   left: 0;
+//   width: 240px;
+//   background: #fff;
+//   box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+//   border-radius: 4px;
+//   display: none;
+//   z-index: 1;
+// }
+
+// .calendar-header {
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between;
+//   padding: 4px 8px;
+// }
+
+// #calendar-title {
+//   font-size: 16px;
+//   margin: 0;
+// }
+
+// #prev-month-button,
+// #next-month-button {
+//   height: 24px;
+//   width: 24px;
+//   background: none;
+//   border: none;
+//   cursor: pointer;
+//   font-size: 20px;
+// }
+
+// .calendar-grid {
+//   display: grid;
+//   grid-template-columns: repeat(7, 1fr);
+//   grid-auto-rows: 32px;
+//   gap: 4px;
+//   padding: 4px;
+// }

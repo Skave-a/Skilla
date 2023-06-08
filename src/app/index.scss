@@ -26,6 +26,36 @@ ul {
   padding-left: 0;
 }
 
+p {
+  margin: 0;
+}
+
+input[type='checkbox'] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  border-color: #ADBFDF;
+  border-radius: 2px;
+  border-width: 2px;
+  outline: none;
+  cursor: pointer;
+}
+
+input[type='checkbox']:checked:before {
+  content: '\2714';
+  display: block;
+  text-align: center;
+  line-height: 16px;
+  font-size: 14px;
+  color: white;
+  background: rgba(212, 223, 243, 0.17);
+
+}
+
+th {
+  text-align: left;
+}
 // #root {
 //   max-width: 1280px;
 //   margin: 0 auto;

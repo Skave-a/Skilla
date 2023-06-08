@@ -7,6 +7,8 @@
   display: flex;
   gap: 32px;
   justify-content: space-between;
+  margin-right: 3px;
+  margin-bottom: 10px;
 }
 
 .filterTitle {
@@ -32,4 +34,8 @@
   line-height: 140%;
   color: #5e7793;
   white-space: nowrap;
+}
+
+.searchL{
+  margin-top: -10px;
 }

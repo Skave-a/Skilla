@@ -26,3 +26,28 @@ export async function getCalls() {
     throw err;
   }
 }
+
+export async function getAudio(id: string, idPartner: string) {
+  const url = 'https://api.skilla.ru/mango/getList';
+  const data = {
+    record: id,
+    partnership_id: idPartner,
+  };
+  const headers = {
+    'Content-Type': 'application/json',
+    Authorization: 'Bearer testtoken',
+  };
+
+  try {
+    const resp = await fetch(`${url}`, {
+      method: 'POST',
+      headers: headers,
+      body: JSON.stringify(data),
+    });
+    const call = await resp.json();
+    return call;
+  } catch (err) {
+    console.log(err);
+    throw err;
+  }
+}

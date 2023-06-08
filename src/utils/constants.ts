@@ -143,35 +143,44 @@ export const TABLE_HEADERS = [
   {
     id: 0,
     title: 'Тип',
-    p: '30px',
+    // p: '30px',
+    width: '49px',
   },
   {
     id: 1,
     title: 'Время',
-    p: '48px',
+    width: '87px',
+    // p: '48px',
   },
   {
     id: 2,
     title: 'Сотрудник',
-    p: '60px',
+    width: '125px',
+    // p: '60px',
   },
   {
     id: 3,
     title: 'Звонок',
-    p: '281px',
+    width: '324px',
+    // p: '281px',
   },
   {
     id: 4,
     title: 'Источник',
-    p: '154px',
+    width: '212px',
+    // p: '154px',
   },
   {
     id: 5,
     title: 'Оценка',
-    p: '414px',
+    // p: '188px',
+    width: '212px',
+    p2: '150px',
   },
   {
     id: 6,
     title: 'Длительность',
+    width: '380px',
+    // p: '39.5px'
   },
 ];

@@ -1,7 +1,7 @@
 .header {
   background: #ffffff;
   box-shadow: 0px 4px 5px #e9edf3;
-  padding: 12px 114px 12px 120px;
+  padding: 14px 114px 10px 120px;
 }
 
 .headerContainer {
@@ -15,18 +15,23 @@
   font-size: 15px;
   line-height: 148%;
   color: #899cb1;
-  margin-right: 96px;
+  // margin-right: 96px;
+  width: 176px;
+  display: flex;
+  align-items: center;
 }
 
-.search {
-  margin-right: 56px;
-}
+// .search {
+// margin-right: 56px;
+// }
 
 .userBlock {
   display: flex;
   gap: 4px;
-  margin-right: 40px;
+  // margin-right: 40px;
   align-items: center;
+  width: 265px;
+  margin: 0 auto;
 }
 
 .user {
