@@ -1,5 +1,5 @@
 import styles from './content.module.scss';
-import plus from '@/assets/bntIcons/plus.svg';
+import plus from '@/assets/icons/ballancePlus.svg';
 import left from '@/assets/icons/keyboard_arrow_left.svg';
 import right from '@/assets/icons/keyboard_arrow_right.svg';
 import calendar from '@/assets/icons/icon-calendar.svg';
