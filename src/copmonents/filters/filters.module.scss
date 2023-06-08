@@ -1,6 +1,14 @@
 .filter {
   display: flex;
   gap: 4px;
+  cursor: pointer;
+}
+
+.filter:hover {
+  opacity: 0.87;
+  .filterTitle {
+    color: #002cfb;
+  }
 }
 
 .blockFilters {
@@ -21,7 +29,7 @@
   opacity: 0.87;
 }
 
-.filterSearch{
+.filterSearch {
   display: flex;
   gap: 12px;
 }
@@ -36,6 +44,6 @@
   white-space: nowrap;
 }
 
-.searchL{
+.searchL {
   margin-top: -10px;
 }

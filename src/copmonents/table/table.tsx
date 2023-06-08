@@ -77,7 +77,13 @@ export const Table = () => {
               <td>
                 <Score score="Отлично" />
               </td>
-              <td style={{ textAlign: 'right', paddingRight: '45px' }} className={styles.num}>
+              <td
+                style={{
+                  textAlign: 'right',
+                  paddingRight: '45px'
+                }}
+                className={styles.num}
+              >
                 {hoveredItemId === item.id ? (
                   <AudioPlayer audio={audio} time={item.time} />
                 ) : (

@@ -20,12 +20,13 @@ export function formatDate(date: Date): string {
 }
 
 export function formatPhoneNumber(phoneNumber: string): string {
-  const cleaned = ('' + phoneNumber).replace(/\D/g, '');
-  const match = cleaned.match(/^(\d{1})(\d{3})(\d{3})(\d{2})(\d{2})$/);
-  if (match) {
-    return `+${match[1]} (${match[2]}) ${match[3]}-${match[4]}-${match[5]}`;
-  }
-  return phoneNumber;
+  const countryCode = phoneNumber.slice(0, 1);
+  const areaCode = phoneNumber.slice(1, 3);
+  const firstPart = phoneNumber.slice(3, 6);
+  const secondPart = phoneNumber.slice(6, 8);
+  const thirdPart = phoneNumber.slice(8, 10);
+
+  return `+${countryCode} (${areaCode}) ${firstPart}-${secondPart}-${thirdPart}`;
 }
 
 export function formatTime(seconds: number): string {
