@@ -10,16 +10,11 @@ import { AudioPlayer } from '../audioPlayer/audioPlayer';
 export const Table = ({ in_out }: { in_out: number }) => {
   const [calls, setCalls] = useState<ITableData[]>();
   const [audio, setAudio] = useState<HTMLAudioElement>();
-  // const [audioRecord, setAudioRecord] = useState('');
-  // const [audioPartnership_id, setAudioPartnership_id] = useState('');
   const [hoveredItemId, setHoveredItemId] = useState<null | number>(null);
 
   useEffect(() => {
     async function fetchData() {
       const callsData = await getCalls(in_out);
-      // const audioUser = await getCallRecordAudio(audioRecord, audioPartnership_id);
-      // console.log('first', audioRecord);
-      // console.log('first', audioPartnership_id);
       const audioUser = await getCallRecordAudio('MToxMDA2NzYxNToxNDM0ODcwNDQzMzow', '136');
 
       setCalls(callsData);
@@ -28,15 +23,9 @@ export const Table = ({ in_out }: { in_out: number }) => {
     fetchData();
   }, [in_out]);
 
-  function handleMouseEnter(
-    itemId: number
-    // record: string, partnership_id: string
-  ) {
+  function handleMouseEnter(itemId: number) {
     setHoveredItemId(itemId);
-    // setAudioRecord(record);
-    // setAudioPartnership_id(partnership_id);
   }
-
 
   function handleMouseLeave() {
     setHoveredItemId(null);
@@ -64,12 +53,7 @@ export const Table = ({ in_out }: { in_out: number }) => {
             <tr
               className={styles.tr}
               key={item.id}
-              onMouseEnter={() =>
-                handleMouseEnter(
-                  item.id
-                  // item.record, item.partnership_id
-                )
-              }
+              onMouseEnter={() => handleMouseEnter(item.id)}
               onMouseLeave={handleMouseLeave}
             >
               <td>

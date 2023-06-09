@@ -1,10 +1,13 @@
 import { formatDate } from '@/utils/fns';
 import { IFetchData } from '@/utils/types';
 
+const token = 'testtoken';
+const urlSkilla = 'https://api.skilla.ru/mango';
+
 export async function getCalls(in_out: number) {
   const inOut = in_out > 1 ? '' : in_out;
 
-  const url = `https://api.skilla.ru/mango/getList?in_out=${inOut}`;
+  const url = `${urlSkilla}/getList?in_out=${inOut}`;
   const data = {
     date_start: '2022-04-19',
     date_end: formatDate(new Date()),
@@ -12,7 +15,7 @@ export async function getCalls(in_out: number) {
   };
   const headers = {
     'Content-Type': 'application/json',
-    Authorization: 'Bearer testtoken',
+    Authorization: `Bearer ${token}`,
   };
 
   try {
@@ -30,7 +33,7 @@ export async function getCalls(in_out: number) {
 }
 
 export async function getAudio(id: string, idPartner: string) {
-  const url = 'https://api.skilla.ru/mango/getRecord';
+  const url = `${urlSkilla}/getRecord`;
   const data = {
     record: id,
     partnership_id: idPartner,
@@ -39,7 +42,7 @@ export async function getAudio(id: string, idPartner: string) {
     'Content-Type': 'audio/mpeg, audio/x-mpeg, audio/x-mpeg-3, audio/mpeg3',
     'Content-Transfer-Encoding': 'binary',
     'Content-Disposition': 'filename="record.mp3"',
-    Authorization: 'Bearer testtoken',
+    Authorization: `Bearer ${token}`,
   };
 
   try {
@@ -57,10 +60,10 @@ export async function getAudio(id: string, idPartner: string) {
 }
 
 export async function getEmployees() {
-  const url = 'https://api.skilla.ru/partnership/getPersonsList';
+  const url = `${urlSkilla}/partnership/getPersonsList`;
   const headers = {
     'Content-Type': 'application/json',
-    Authorization: 'Bearer testtoken',
+    Authorization: `Bearer ${token}`,
   };
 
   try {
@@ -77,9 +80,9 @@ export async function getEmployees() {
 }
 
 export async function getCallRecordAudio(recordId: string, partnershipId: string) {
-  const url = `https://api.skilla.ru/mango/getRecord?record=${recordId}&partnership_id=${partnershipId}`;
+  const url = `${urlSkilla}/getRecord?record=${recordId}&partnership_id=${partnershipId}`;
   const headers = {
-    Authorization: `Bearer testtoken`,
+    Authorization: `Bearer ${token}`,
     'Content-Type': 'audio/mpeg, audio/x-mpeg, audio/x-mpeg-3, audio/mpeg3',
     'Content-Transfer-Encoding': 'binary',
     'Content-Disposition': 'filename="record.mp3"',

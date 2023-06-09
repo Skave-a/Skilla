@@ -124,20 +124,6 @@ export const FILTERS = [
   {
     id: 2,
     title: 'Все звонки',
-    // menu: [
-    //   {
-    //     label: 'Все звонки',
-    //     value: 2,
-    //   },
-    //   {
-    //     label: 'Входящие',
-    //     value: 0,
-    //   },
-    //   {
-    //     label: 'Исходящие',
-    //     value: 1,
-    //   },
-    // ],
     menu: [
       {
         title: 'Все звонки',
