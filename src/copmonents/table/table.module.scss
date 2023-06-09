@@ -2,7 +2,13 @@
   background: #ffffff;
   box-shadow: 0px 4px 5px #e9edf3;
   border-radius: 8px;
-  padding: 26px 0 57px 40px;
+  padding: 25px 0 57px;
+  margin-bottom: 100px;
+}
+
+.tableBlock {
+  border: none;
+  border-collapse: collapse;
 }
 
 .tableHeader {
@@ -20,6 +26,29 @@
   border-bottom: 1px solid #eaf0fa;
 }
 
+.tr:hover {
+  background: rgba(212, 223, 243, 0.17);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  .checkB {
+    appearance: revert !important;
+  }
+}
+
 .td {
-  padding: 17px 0 16px;
+  padding: 15px 0;
+}
+
+.avatar {
+  width: 32px;
+  background-repeat: 50%;
+}
+
+.num {
+  font-family: 'SF Pro Display', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 140%;
+  color: #122945;
 }

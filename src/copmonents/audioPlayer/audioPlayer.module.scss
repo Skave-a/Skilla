@@ -1,0 +1,29 @@
+.playerControls {
+  height: 48px;
+  // width: 352px;
+  background: #eaf0fa;
+  border-radius: 48px;
+  display: flex;
+  align-items: center;
+}
+
+.progressContainer {
+  content: '';
+  background: #adbfdf;
+  border-radius: 50px;
+  height: 4px;
+  width: 164px;
+  border-radius: 50px;
+}
+
+.play {
+  background: url('@/assets/player/play.svg');
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 25px;
+}
+
+.downl {
+  background: url('@/assets/player/downl.svg');
+  background-repeat: no-repeat;
+}

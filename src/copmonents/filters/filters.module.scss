@@ -1,25 +1,35 @@
 .filter {
   display: flex;
   gap: 4px;
+  cursor: pointer;
+}
+
+.filter:hover {
+  opacity: 0.87;
+  .filterTitle {
+    color: #002cfb;
+  }
 }
 
 .blockFilters {
   display: flex;
   gap: 32px;
   justify-content: space-between;
+  margin-right: 3px;
+  margin-bottom: 10px;
 }
 
-.filterTitle {
-  font-family: 'SF Pro Display', sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 148%;
-  color: #5e7793;
-  opacity: 0.87;
-}
+// .filterTitle {
+//   font-family: 'SF Pro Display', sans-serif;
+//   font-style: normal;
+//   font-weight: 400;
+//   font-size: 14px;
+//   line-height: 148%;
+//   color: #5e7793;
+//   opacity: 0.87;
+// }
 
-.filterSearch{
+.filterSearch {
   display: flex;
   gap: 12px;
 }
@@ -32,4 +42,8 @@
   line-height: 140%;
   color: #5e7793;
   white-space: nowrap;
+}
+
+.searchL {
+  margin-top: -10px;
 }

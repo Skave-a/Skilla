@@ -124,6 +124,20 @@ export const FILTERS = [
   {
     id: 2,
     title: 'Все звонки',
+    menu: [
+      {
+        title: 'Все звонки',
+        id: 2,
+      },
+      {
+        title: 'Входящие',
+        id: 0,
+      },
+      {
+        title: 'Исходящие',
+        id: 1,
+      },
+    ],
   },
   {
     id: 3,
@@ -143,35 +157,37 @@ export const TABLE_HEADERS = [
   {
     id: 0,
     title: 'Тип',
-    p: '30px',
+    width: '49px',
   },
   {
     id: 1,
     title: 'Время',
-    p: '48px',
+    width: '87px',
   },
   {
     id: 2,
     title: 'Сотрудник',
-    p: '60px',
+    width: '125px',
   },
   {
     id: 3,
     title: 'Звонок',
-    p: '281px',
+    width: '324px',
   },
   {
     id: 4,
     title: 'Источник',
-    p: '154px',
+    width: '212px',
   },
   {
     id: 5,
     title: 'Оценка',
-    p: '414px',
+    width: '212px',
+    p2: '150px',
   },
   {
     id: 6,
     title: 'Длительность',
+    width: '380px',
   },
 ];
