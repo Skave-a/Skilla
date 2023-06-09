@@ -20,6 +20,10 @@ export function formatDate(date: Date): string {
 }
 
 export function formatPhoneNumber(phoneNumber: string): string {
+  const regex = /[a-zA-Z]/;
+  if (regex.test(phoneNumber)) {
+    return phoneNumber;
+  }
   const countryCode = phoneNumber.slice(0, 1);
   const areaCode = phoneNumber.slice(1, 3);
   const firstPart = phoneNumber.slice(3, 6);

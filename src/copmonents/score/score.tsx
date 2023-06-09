@@ -12,7 +12,7 @@ export const Score = ({ score }: { score: string }) => {
   const text = score === 'Отлично' ? 'Отлично' : score === 'Хорошо' ? 'Хорошо' : 'Плохо';
 
   return (
-    <div style={{marginTop: '-3px'}}>
+    <div style={{marginTop: '3px'}}>
       <div className={styles.dots}>{dots}</div>
       <span
         style={{

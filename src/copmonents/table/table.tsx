@@ -13,7 +13,7 @@ export const Table = ({ in_out }: { in_out: number }) => {
   // const [audioRecord, setAudioRecord] = useState('');
   // const [audioPartnership_id, setAudioPartnership_id] = useState('');
   const [hoveredItemId, setHoveredItemId] = useState<null | number>(null);
-  console.log('in_out', in_out);
+
   useEffect(() => {
     async function fetchData() {
       const callsData = await getCalls(in_out);
@@ -37,7 +37,7 @@ export const Table = ({ in_out }: { in_out: number }) => {
     // setAudioPartnership_id(partnership_id);
   }
 
-  console.log('callsData', calls)
+
   function handleMouseLeave() {
     setHoveredItemId(null);
   }
