@@ -1,7 +1,7 @@
 import { FILTERS } from '@/utils/constants';
 import styles from './filters.module.scss';
-import dropdown from '@/assets/icons/dropdown.svg';
 import search from '@/assets/icons/search.svg';
+// import { Select, Space } from 'antd';
 
 export const Filters = () => {
   return (
@@ -12,10 +12,33 @@ export const Filters = () => {
       </div>
       <div className={styles.blockFilters}>
         {FILTERS.map((filter) => (
-          <div key={filter.id} className={styles.filter}>
-            <p className={styles.filterTitle}>{filter.title}</p>
-            <img src={dropdown} alt="" />
-          </div>
+          // <Space wrap>
+          //   <Select
+          //     defaultValue="lucy"
+          //     style={{ width: 120 }}
+          //     bordered={false}
+          //     options={[
+          //       { value: 'jack', label: 'Jack' },
+          //       { value: 'lucy', label: 'Lucy' },
+          //       { value: 'Yiminghe', label: 'yiminghe' },
+          //     ]}
+          //   />
+          //   <Select
+          //     defaultValue="lucy"
+          //     style={{ width: 120 }}
+          //     disabled
+          //     bordered={false}
+          //     options={[{ value: 'lucy', label: 'Lucy' }]}
+          //   />
+          // </Space>
+
+          <select key={filter.id} className='select-css'>
+            <option value="option1" style={{padding: '5px'}}>
+              {filter.title}
+            </option>
+            <option value="option2">Option 2</option>
+            <option value="option3">Option 3</option>
+          </select>
         ))}
       </div>
     </div>

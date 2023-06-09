@@ -19,20 +19,15 @@ export const Content = () => {
           <img src={left} alt="left" style={{ paddingRight: '12px' }} />
           <img src={calendar} alt="calendar" />
           <p className={styles.days}>3 дня</p>
+          {/* <select style={{appearance: 'none'}}>
+            <option>3 дня</option> */}
+          {/* <option>Неделя</option>
+            <option>Месяц</option>
+            <option>Год</option>
+            <option>Указать даты</option> */}
+          {/* </select>{' '} */}
           <img src={right} alt="right" />
         </div>
-        {/* <div className="date-picker">
-  <input type="text" name="calendar" id="calendar-input" />
-  <button id="calendar-icon"></button>
-  <div className="calendar-container">
-    <div className="calendar-header">
-      <button id="prev-month-button">&lt;</button>
-      <h2 id="calendar-title"></h2>
-      <button id="next-month-button">&gt;</button>
-    </div>
-    <div className="calendar-grid"></div>
-  </div>
-</div> */}
       </div>
       <Filters />
       <Table />

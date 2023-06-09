@@ -1,7 +1,7 @@
 import { TABLE_HEADERS } from '@/utils/constants';
 import styles from './table.module.scss';
 import { Score } from '@/copmonents/score/score';
-import { getAudio, getCalls } from '@/app/api/api';
+import { getCallRecordAudio, getCalls } from '@/app/api/api';
 import { useEffect, useState } from 'react';
 import { formatPhoneNumber, formatTime, getArrowImage, getTimeFromDateTime } from '@/utils/fns';
 import { ITableData } from '@/utils/types';
@@ -9,13 +9,13 @@ import { AudioPlayer } from '../audioPlayer/audioPlayer';
 
 export const Table = () => {
   const [calls, setCalls] = useState<ITableData[]>();
-  const [audio, setAudio] = useState();
+  const [audio, setAudio] = useState<HTMLAudioElement>();
   const [hoveredItemId, setHoveredItemId] = useState<null | number>(null);
 
   useEffect(() => {
     async function fetchData() {
       const callsData = await getCalls();
-      const audioUser = await getAudio('MToxMDA2NzYxNToxNDM0ODcwNDQzMzow', '136');
+      const audioUser = await getCallRecordAudio('MToxMDA2NzYxNToxNDM0ODcwNDQzMzow', '136');
       setCalls(callsData);
       setAudio(audioUser);
     }
@@ -29,7 +29,7 @@ export const Table = () => {
   function handleMouseLeave() {
     setHoveredItemId(null);
   }
-
+  console.log('audio', audio);
   return (
     <div className={styles.table}>
       <table className={styles.tableBlock}>
@@ -41,12 +41,7 @@ export const Table = () => {
               </label>
             </th>
             {TABLE_HEADERS.map((header) => (
-              <th
-                key={header.id}
-                className={styles.tableHeader}
-                // style={{ paddingRight: header.p }}
-                style={{ width: header.width }}
-              >
+              <th key={header.id} className={styles.tableHeader} style={{ width: header.width }}>
                 {header.title}
               </th>
             ))}
@@ -80,12 +75,12 @@ export const Table = () => {
               <td
                 style={{
                   textAlign: 'right',
-                  paddingRight: '45px'
+                  paddingRight: '45px',
                 }}
                 className={styles.num}
               >
                 {hoveredItemId === item.id ? (
-                  <AudioPlayer audio={audio} time={item.time} />
+                  <AudioPlayer audio={audio?.src} time={item.time} />
                 ) : (
                   formatTime(item.time)
                 )}
