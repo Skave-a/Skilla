@@ -5,8 +5,10 @@ import right from '@/assets/icons/keyboard_arrow_right.svg';
 import calendar from '@/assets/icons/icon-calendar.svg';
 import { Filters } from '@/copmonents/filters/filters';
 import { Table } from '@/copmonents/table/table';
+import { useState } from 'react';
 
 export const Content = () => {
+  const [calls, setCalls] = useState<number>(0);
   return (
     <div className={`container ${styles.content}`}>
       <div className={styles.title}>
@@ -29,8 +31,8 @@ export const Content = () => {
           <img src={right} alt="right" />
         </div>
       </div>
-      <Filters />
-      <Table />
+      <Filters setCalls={setCalls}/>
+      <Table in_out={calls} />
     </div>
   );
 };

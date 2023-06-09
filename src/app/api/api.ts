@@ -1,12 +1,14 @@
 import { formatDate } from '@/utils/fns';
 import { IFetchData } from '@/utils/types';
 
-export async function getCalls() {
-  const url = 'https://api.skilla.ru/mango/getList';
+export async function getCalls(in_out: number) {
+  const inOut = in_out > 1 ? '' : in_out;
+
+  const url = `https://api.skilla.ru/mango/getList?in_out=${inOut}`;
   const data = {
     date_start: '2022-04-19',
     date_end: formatDate(new Date()),
-    in_out: 0,
+    in_out: in_out,
   };
   const headers = {
     'Content-Type': 'application/json',

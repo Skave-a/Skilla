@@ -7,29 +7,41 @@ import { formatPhoneNumber, formatTime, getArrowImage, getTimeFromDateTime } fro
 import { ITableData } from '@/utils/types';
 import { AudioPlayer } from '../audioPlayer/audioPlayer';
 
-export const Table = () => {
+export const Table = ({ in_out }: { in_out: number }) => {
   const [calls, setCalls] = useState<ITableData[]>();
   const [audio, setAudio] = useState<HTMLAudioElement>();
+  // const [audioRecord, setAudioRecord] = useState('');
+  // const [audioPartnership_id, setAudioPartnership_id] = useState('');
   const [hoveredItemId, setHoveredItemId] = useState<null | number>(null);
-
+  console.log('in_out', in_out);
   useEffect(() => {
     async function fetchData() {
-      const callsData = await getCalls();
+      const callsData = await getCalls(in_out);
+      // const audioUser = await getCallRecordAudio(audioRecord, audioPartnership_id);
+      // console.log('first', audioRecord);
+      // console.log('first', audioPartnership_id);
       const audioUser = await getCallRecordAudio('MToxMDA2NzYxNToxNDM0ODcwNDQzMzow', '136');
+
       setCalls(callsData);
       setAudio(audioUser);
     }
     fetchData();
-  }, []);
+  }, [in_out]);
 
-  function handleMouseEnter(itemId: number) {
+  function handleMouseEnter(
+    itemId: number
+    // record: string, partnership_id: string
+  ) {
     setHoveredItemId(itemId);
+    // setAudioRecord(record);
+    // setAudioPartnership_id(partnership_id);
   }
 
+  console.log('callsData', calls)
   function handleMouseLeave() {
     setHoveredItemId(null);
   }
-  console.log('audio', audio);
+
   return (
     <div className={styles.table}>
       <table className={styles.tableBlock}>
@@ -52,7 +64,12 @@ export const Table = () => {
             <tr
               className={styles.tr}
               key={item.id}
-              onMouseEnter={() => handleMouseEnter(item.id)}
+              onMouseEnter={() =>
+                handleMouseEnter(
+                  item.id
+                  // item.record, item.partnership_id
+                )
+              }
               onMouseLeave={handleMouseLeave}
             >
               <td>

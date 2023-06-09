@@ -3,6 +3,8 @@ export interface IFetchData {
 }
 
 export interface ITableData {
+  record: string;
+  partnership_id: string;
   status: string;
   person_avatar: string;
   time: number;
