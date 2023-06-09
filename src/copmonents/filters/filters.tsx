@@ -1,14 +1,9 @@
 import { FILTERS } from '@/utils/constants';
 import styles from './filters.module.scss';
 import search from '@/assets/icons/search.svg';
-// import { Select, Space } from 'antd';
 import { ChangeEvent } from 'react';
 
 export const Filters = ({ setCalls }: { setCalls: (value: number) => void }) => {
-  // const handleSelect = (value: string) => {
-  //   setCalls(Number(value));
-  // };
-
   const handleSelect = (e: ChangeEvent<HTMLSelectElement>) => {
     setCalls(Number(e.target.value));
   };
@@ -30,21 +25,6 @@ export const Filters = ({ setCalls }: { setCalls: (value: number) => void }) => 
               ))}
             </select>
           ) : (
-            // <Space wrap key={filter.id}>
-            //   <Select
-            //     onChange={handleSelect}
-            //     defaultValue={filter.menu[0].label}
-            //     style={{
-            //       width: 120,
-            //       fontFamily: 'SF Pro Display',
-            //       fontSize: '14px',
-            //       color: '#5e7793',
-            //       opacity: '0.87',
-            //     }}
-            //     bordered={false}
-            //     options={filter.menu}
-            //   ></Select>
-            // </Space>
             <select key={filter.id}>
               <option value={filter.title}>{filter.title}</option>
             </select>
