@@ -8,7 +8,7 @@ export const Header = () => {
   const date: Date = new Date();
   const options: Intl.DateTimeFormatOptions = { weekday: 'long', day: 'numeric', month: 'short' };
   const dateString: string = date.toLocaleDateString('ru-RU', options);
-  const dateToday = `${dateString.charAt(0).toUpperCase()}${dateString.slice(1)}`
+  const dateToday = `${dateString.charAt(0).toUpperCase()}${dateString.slice(1)}`;
 
   return (
     <header className={styles.header}>
@@ -16,12 +16,14 @@ export const Header = () => {
         <p className={styles.date}>{dateToday}</p>
         <CallAnalytics />
         <img src={search} alt="search" className={styles.search} />
+        <div className={styles.search}>
+        </div>
         <div className={styles.userBlock}>
           <p className={styles.user}>ИП Сидорова Александра Михайловна</p>
           <img src={keyDown} alt="open " />
         </div>
         <div className={styles.menuUser}>
-          <img src={avatar} alt="avatar" className={styles.avatar}/>
+          <img src={avatar} alt="avatar" className={styles.avatar} />
           <img src={keyDown} alt="open " />
         </div>
       </div>

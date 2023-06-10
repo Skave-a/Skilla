@@ -18,6 +18,7 @@
 }
 
 .menuItemIcon {
+  transition: all 0.3s ease-in-out;
   opacity: 60%;
 }
 
@@ -33,6 +34,13 @@ a.pending {
 
 a.pending {
   color: rgba(255, 255, 255, 0.6);
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    color: white;
+    .menuItemIcon {
+      opacity: 100%;
+    }
+  }
 }
 
 a.active {
@@ -57,7 +65,6 @@ a.active {
   .menuItemIcon {
     opacity: 100%;
   }
-
 }
 
 .dot {

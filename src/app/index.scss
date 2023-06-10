@@ -70,7 +70,16 @@ select {
   cursor: pointer;
 
   &:hover {
+    transition: all 0.3s ease-in-out;
     color: #002cfb;
     opacity: 0.87;
   }
 }
+
+// .search {
+//   &:hover {
+//     .hover{
+//     transition: all 0.3s ease-in-out;
+//     fill: #000;}
+//   }
+// }
