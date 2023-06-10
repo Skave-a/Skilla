@@ -5,6 +5,7 @@ import right from '@/assets/icons/keyboard_arrow_right.svg';
 import calendar from '@/assets/icons/icon-calendar.svg';
 import { Filters, Table } from '@/copmonents';
 import { useState } from 'react';
+import { DropdownDays } from '../dropdownDays/dropdownDays';
 
 export const Content = () => {
   const [calls, setCalls] = useState<number>(2);
@@ -17,10 +18,10 @@ export const Content = () => {
           <object type="image/svg+xml" data={plus} className={styles.plus} />
         </button>
         <div className={styles.blockDays}>
-          <img src={left} alt="left" style={{ paddingRight: '12px' }} />
-          <img src={calendar} alt="calendar" />
-          <p className={styles.days}>3 дня</p>
-          <img src={right} alt="right" />
+          <img src={left} alt="left" style={{marginRight: '12px'}}/>
+          <img src={calendar} alt="calendar" style={{marginRight: '9px'}}/>
+          <DropdownDays />
+          <img src={right} alt="right" style={{marginRight: '5px'}}/>
         </div>
       </div>
       <Filters setCalls={setCalls} />
