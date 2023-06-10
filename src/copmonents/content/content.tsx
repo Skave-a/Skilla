@@ -8,7 +8,7 @@ import { Table } from '@/copmonents/table/table';
 import { useState } from 'react';
 
 export const Content = () => {
-  const [calls, setCalls] = useState<number>(0);
+  const [calls, setCalls] = useState<number>(2);
   return (
     <div className={`container ${styles.content}`}>
       <div className={styles.title}>

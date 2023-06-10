@@ -1,6 +1,7 @@
 import { formatTime } from '@/utils/fns';
 import styles from './audioPlayer.module.scss';
 import play from '@/assets/player/play.svg';
+import pause from '@/assets/player/pause.png';
 import { useRef, useState } from 'react';
 
 export const AudioPlayer = ({ audio, time }: { audio: string | undefined; time: number }) => {
@@ -21,7 +22,7 @@ export const AudioPlayer = ({ audio, time }: { audio: string | undefined; time: 
   const handleTimeUpdate = () => {
     const audioElement = audioRef.current;
     if (audioElement) {
-      setCurrentTime(audioElement.currentTime);
+      setCurrentTime((audioElement.currentTime / audioElement.duration) * 100);
     }
   };
 
@@ -29,12 +30,15 @@ export const AudioPlayer = ({ audio, time }: { audio: string | undefined; time: 
     <div className={styles.playerControls}>
       <audio ref={audioRef} src={audio} onTimeUpdate={handleTimeUpdate} />
       <p style={{ marginRight: '12px', marginLeft: '19px' }}>{formatTime(time)}</p>
-
-      <img src={play} alt="play" style={{ marginRight: '8px' }} onClick={togglePlay} />
+      {isPlaying ? (
+        <img src={pause} alt="pause" onClick={togglePlay} className={styles.btnPlayer} />
+      ) : (
+        <img src={play} alt="play" onClick={togglePlay} className={styles.btnPlayer} />
+      )}
       <div className={styles.progressContainer} style={{ marginRight: '11px' }}>
         <div
           className={styles.progressContainer}
-          style={{ width: `${currentTime}%`, borderColor: '#fff' }}
+          style={{ width: `${currentTime}%`, backgroundColor: '#fff' }}
         />
       </div>
       <button className={styles.downl} style={{ marginTop: '-5px' }}></button>
