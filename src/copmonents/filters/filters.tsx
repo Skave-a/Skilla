@@ -1,13 +1,9 @@
 import { FILTERS } from '@/utils';
 import styles from './filters.module.scss';
 import search from '@/assets/icons/search.svg';
-import { ChangeEvent } from 'react';
+import { Dropdown } from '../dropdown/dropdown';
 
 export const Filters = ({ setCalls }: { setCalls: (value: number) => void }) => {
-  const handleSelect = (e: ChangeEvent<HTMLSelectElement>) => {
-    setCalls(Number(e.target.value));
-  };
-
   return (
     <div className={styles.blockFilters}>
       <div className={styles.filterSearch}>
@@ -16,19 +12,13 @@ export const Filters = ({ setCalls }: { setCalls: (value: number) => void }) => 
       </div>
       <div className={styles.blockFilters}>
         {FILTERS.map((filter) =>
-          filter.menu ? (
-            <select key={filter.id} onChange={(e) => handleSelect(e)}>
-              {filter.menu.map((el) => (
-                <option value={el.id} key={el.id}>
-                  {el.title}
-                </option>
-              ))}
-            </select>
-          ) : (
-            <select key={filter.id}>
-              <option value={filter.title}>{filter.title}</option>
-            </select>
-          )
+          // filter.menu ? (
+            <Dropdown key={filter.id} options={filter.menu} setCalls={setCalls}/>
+          // ) : (
+          //   <select key={filter.id}>
+          //     <option value={filter.title}>{filter.title}</option>
+          //   </select>
+          // )
         )}
       </div>
     </div>

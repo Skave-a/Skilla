@@ -1,0 +1,56 @@
+.dropdown {
+  position: relative;
+}
+
+.dropdownMenu {
+  position: absolute;
+
+  background: #ffffff;
+  border: 1px solid #eaf0fa;
+  box-shadow: 4px 16px 50px rgba(129, 135, 163, 0.24);
+  border-radius: 4px;
+
+  top: 11px;
+  right: 0;
+}
+
+.dropdownMenuItem {
+  font-family: 'SF Pro Display';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 28px;
+  color: #899cb1;
+  padding: 10px 0 10px 20px;
+  width: 308px;
+  background: #fff;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    background: rgba(0, 44, 251, 0.13);
+    color: #002cfb;
+  }
+}
+
+.dropdownToggle {
+  outline: none;
+  background: inherit;
+  font-family: 'SF Pro Display', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 148%;
+  color: #5e7793;
+  opacity: 0.87;
+  cursor: pointer;
+
+  display: flex;
+  gap: 4px;
+
+  &:hover {
+    transition: all 0.3s ease-in-out;
+    color: #002cfb;
+    opacity: 0.87;
+  }
+}

@@ -1,7 +1,7 @@
 import { formatTime } from '@/utils';
 import styles from './audioPlayer.module.scss';
 import play from '@/assets/player/play.svg';
-import pause from '@/assets/player/pause.png';
+import pause from '@/assets/player/pause.svg';
 import { useEffect, useRef, useState } from 'react';
 import { getCallRecordAudio } from '../../app/api/api';
 import downl from '@/assets/player/downl.svg';
@@ -57,7 +57,7 @@ export const AudioPlayer = ({
       <div className={styles.progressContainer} style={{ marginRight: '11px' }}>
         <div
           className={styles.progressContainer}
-          style={{ width: `${currentTime}%`, backgroundColor: '#fff' }}
+          style={{ width: `${currentTime}%`, backgroundColor: '#002CFB' }}
         />
       </div>
       <img src={downl} alt="downl" />

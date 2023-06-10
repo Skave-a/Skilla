@@ -115,41 +115,65 @@ export const CALL_ANALYTICS = [
 export const FILTERS = [
   {
     id: 0,
-    title: 'Все типы',
+    menu: [
+      {
+        label: 'Все типы',
+        value: 0,
+      },
+    ],
   },
   {
     id: 1,
-    title: 'Все сотрудники',
+    menu: [
+      {
+        label: 'Все сотрудники',
+        value: 0,
+      },
+    ],
   },
   {
     id: 2,
-    title: 'Все звонки',
     menu: [
       {
-        title: 'Все звонки',
-        id: 2,
+        label: 'Все звонки',
+        value: 2,
       },
       {
-        title: 'Входящие',
-        id: 0,
+        label: 'Входящие',
+        value: 0,
       },
       {
-        title: 'Исходящие',
-        id: 1,
+        label: 'Исходящие',
+        value: 1,
       },
     ],
   },
   {
     id: 3,
-    title: 'Все источники',
+    menu: [
+      {
+        label: 'Все источники',
+        value: 0,
+      },
+    ],
   },
   {
     id: 4,
-    title: 'Все оценки',
+    menu: [
+      {
+        label: 'Все оценки',
+        value: 0,
+      },
+    ],
   },
   {
     id: 5,
-    title: 'Все ошибки',
+    menu: [
+      {
+        label: 'Все ошибки',
+        value: 0,
+      },
+    ],
   },
 ];
 
