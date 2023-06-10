@@ -17,7 +17,7 @@ export const Filters = ({ setCalls }: { setCalls: (value: number) => void }) => 
       <div className={styles.blockFilters}>
         {FILTERS.map((filter) =>
           filter.menu ? (
-            <select key={filter.id} className="select-css" onChange={(e) => handleSelect(e)}>
+            <select key={filter.id} onChange={(e) => handleSelect(e)}>
               {filter.menu.map((el) => (
                 <option value={el.id} key={el.id}>
                   {el.title}
