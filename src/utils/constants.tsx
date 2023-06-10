@@ -11,6 +11,7 @@ import calls from '@/assets/icons_sidebar/calls-24px.svg';
 
 import plus from '@/assets/bntIcons/plus.svg';
 import add from '@/assets/bntIcons/pay.svg';
+import { Calendar } from '../copmonents/calendar/calendar';
 
 export const MENU = [
   {
@@ -214,4 +215,27 @@ export const TABLE_HEADERS = [
     title: 'Длительность',
     width: '330px',
   },
+];
+
+export const TABLE_DATA = [
+  {
+    label: '3 дня',
+    value: 3,
+  },
+  {
+    label: 'Неделя',
+    value: 7,
+  },
+  {
+    label: 'Месяц',
+    value: 30,
+  },
+  {
+    label: 'Год',
+    value: 365,
+  },
+  {
+    label: <Calendar />,
+    value: 0,
+  }
 ];
