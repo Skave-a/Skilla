@@ -47,3 +47,9 @@
 .avatar {
   border-radius: 50px;
 }
+
+.search, .userBlock, .menuUser {
+  &:hover {
+    cursor: pointer;
+  }
+}
