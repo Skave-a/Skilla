@@ -5,9 +5,7 @@ const token = 'testtoken';
 const urlSkilla = 'https://api.skilla.ru/mango';
 
 export async function getCalls(in_out: number) {
-  const inOut = in_out > 1 ? '' : in_out;
-
-  const url = `${urlSkilla}/getList?in_out=${inOut}`;
+  const url = in_out > 1 ? `${urlSkilla}/getList` : `${urlSkilla}/getList?in_out=${in_out}`;
   const data = {
     date_start: '2022-04-19',
     date_end: formatDate(new Date()),
