@@ -12,13 +12,13 @@ export const Filters = ({ setCalls }: { setCalls: (value: number) => void }) => 
       </div>
       <div className={styles.blockFilters}>
         {FILTERS.map((filter) =>
-          filter.menu ? (
+          // filter.menu ? (
             <Dropdown key={filter.id} options={filter.menu} setCalls={setCalls}/>
-          ) : (
-            <select key={filter.id}>
-              <option value={filter.title}>{filter.title}</option>
-            </select>
-          )
+          // ) : (
+          //   <select key={filter.id}>
+          //     <option value={filter.title}>{filter.title}</option>
+          //   </select>
+          // )
         )}
       </div>
     </div>
