@@ -1,11 +1,15 @@
-import { TABLE_HEADERS } from '@/utils/constants';
-import styles from './table.module.scss';
-import { Score } from '@/copmonents/score/score';
-import { getCallRecordAudio, getCalls } from '@/app/api/api';
 import { useEffect, useState } from 'react';
-import { formatPhoneNumber, formatTime, getArrowImage, getTimeFromDateTime } from '@/utils/fns';
-import { ITableData } from '@/utils/types';
-import { AudioPlayer } from '../audioPlayer/audioPlayer';
+import {
+  TABLE_HEADERS,
+  formatPhoneNumber,
+  formatTime,
+  getArrowImage,
+  getTimeFromDateTime,
+  ITableData,
+} from '@/utils';
+import styles from './table.module.scss';
+import { getCallRecordAudio, getCalls } from '@/app/api/api';
+import { AudioPlayer, Score } from '@/copmonents';
 
 export const Table = ({ in_out }: { in_out: number }) => {
   const [calls, setCalls] = useState<ITableData[]>();

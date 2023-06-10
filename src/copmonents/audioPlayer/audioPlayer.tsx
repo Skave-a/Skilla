@@ -1,4 +1,4 @@
-import { formatTime } from '@/utils/fns';
+import { formatTime } from '@/utils';
 import styles from './audioPlayer.module.scss';
 import play from '@/assets/player/play.svg';
 import pause from '@/assets/player/pause.png';

@@ -3,8 +3,7 @@ import plus from '@/assets/icons/ballancePlus.svg';
 import left from '@/assets/icons/keyboard_arrow_left.svg';
 import right from '@/assets/icons/keyboard_arrow_right.svg';
 import calendar from '@/assets/icons/icon-calendar.svg';
-import { Filters } from '@/copmonents/filters/filters';
-import { Table } from '@/copmonents/table/table';
+import { Filters, Table } from '@/copmonents';
 import { useState } from 'react';
 
 export const Content = () => {
@@ -24,7 +23,7 @@ export const Content = () => {
           <img src={right} alt="right" />
         </div>
       </div>
-      <Filters setCalls={setCalls}/>
+      <Filters setCalls={setCalls} />
       <Table in_out={calls} />
     </div>
   );

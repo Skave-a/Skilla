@@ -1,4 +1,4 @@
-import { CALL_ANALYTICS } from '@/utils/constants';
+import { CALL_ANALYTICS } from '@/utils';
 import styles from './blockAnalytics.module.scss';
 
 export const BlockAnalytics = () => {

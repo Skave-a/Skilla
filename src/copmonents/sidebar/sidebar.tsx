@@ -1,8 +1,8 @@
-import { MENU, MENU_BNTS } from '@/utils/constants';
+import { MENU, MENU_BNTS } from '@/utils';
 import styles from './sidebar.module.scss';
 import logo from '@/assets/logo.svg';
 import { NavLink } from 'react-router-dom';
-import { SkillaBtn } from '@/copmonents/button/skillaBtn';
+import { SkillaBtn } from '@/copmonents';
 
 const setActive = ({ isActive }: { isActive: boolean }) =>
   isActive ? styles.active : styles.pending;
