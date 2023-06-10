@@ -1,4 +1,4 @@
-import { FILTERS } from '@/utils/constants';
+import { FILTERS } from '@/utils';
 import styles from './filters.module.scss';
 import search from '@/assets/icons/search.svg';
 import { ChangeEvent } from 'react';

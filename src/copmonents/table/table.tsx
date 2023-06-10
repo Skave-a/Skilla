@@ -1,24 +1,24 @@
-import { TABLE_HEADERS } from '@/utils/constants';
-import styles from './table.module.scss';
-import { Score } from '@/copmonents/score/score';
-import { getCallRecordAudio, getCalls } from '@/app/api/api';
 import { useEffect, useState } from 'react';
-import { formatPhoneNumber, formatTime, getArrowImage, getTimeFromDateTime } from '@/utils/fns';
-import { ITableData } from '@/utils/types';
-import { AudioPlayer } from '../audioPlayer/audioPlayer';
+import {
+  TABLE_HEADERS,
+  formatPhoneNumber,
+  formatTime,
+  getArrowImage,
+  getTimeFromDateTime,
+  ITableData,
+} from '@/utils';
+import styles from './table.module.scss';
+import { getCalls } from '@/app/api/api';
+import { AudioPlayer, Score } from '@/copmonents';
 
 export const Table = ({ in_out }: { in_out: number }) => {
   const [calls, setCalls] = useState<ITableData[]>();
-  const [audio, setAudio] = useState<HTMLAudioElement>();
   const [hoveredItemId, setHoveredItemId] = useState<null | number>(null);
 
   useEffect(() => {
     async function fetchData() {
       const callsData = await getCalls(in_out);
-      const audioUser = await getCallRecordAudio('MToxMDA2NzYxNToxNDM0ODcwNDQzMzow', '136');
-
       setCalls(callsData);
-      setAudio(audioUser);
     }
     fetchData();
   }, [in_out]);
@@ -81,7 +81,11 @@ export const Table = ({ in_out }: { in_out: number }) => {
                 className={styles.num}
               >
                 {hoveredItemId === item.id ? (
-                  <AudioPlayer audio={audio?.src} time={item.time} />
+                  <AudioPlayer
+                    time={item.time}
+                    record={item.record}
+                    partnership_id={item.partnership_id}
+                  />
                 ) : (
                   formatTime(item.time)
                 )}

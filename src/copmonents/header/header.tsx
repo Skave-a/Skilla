@@ -1,4 +1,4 @@
-import { CallAnalytics } from '@/copmonents/callAnalytics/callAnalytics';
+import { CallAnalytics } from '@/copmonents';
 import styles from './header.module.scss';
 import search from '@/assets/icons/search.svg';
 import keyDown from '@/assets/icons/keyboard_arrow_down_black_24dp 1.svg';

@@ -1,4 +1,4 @@
-import { BlockAnalytics } from "@/copmonents/blockAnalytics/blockAnalytics"
+import { BlockAnalytics } from "@/copmonents"
 
 export const CallAnalytics = () => {
   return (
