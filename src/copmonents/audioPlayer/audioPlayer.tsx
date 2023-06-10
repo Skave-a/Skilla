@@ -4,6 +4,7 @@ import play from '@/assets/player/play.svg';
 import pause from '@/assets/player/pause.png';
 import { useEffect, useRef, useState } from 'react';
 import { getCallRecordAudio } from '../../app/api/api';
+import downl from '@/assets/player/downl.svg';
 
 export const AudioPlayer = ({
   time,
@@ -59,7 +60,7 @@ export const AudioPlayer = ({
           style={{ width: `${currentTime}%`, backgroundColor: '#fff' }}
         />
       </div>
-      <button className={styles.downl} style={{ marginTop: '-5px' }}></button>
+      <img src={downl} alt="downl" />
     </div>
   );
 };

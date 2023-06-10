@@ -36,7 +36,7 @@ export const Table = ({ in_out }: { in_out: number }) => {
       <table className={styles.tableBlock}>
         <thead>
           <tr>
-            <th>
+            <th className={styles.tableHeader}>
               <label>
                 <input type="checkbox" name="allCalls" className={styles.checkB} />
               </label>
@@ -62,7 +62,7 @@ export const Table = ({ in_out }: { in_out: number }) => {
                 </label>
               </td>
               <td>
-                <img src={getArrowImage(item.status)} alt="arrow" />
+                <img src={getArrowImage(item.in_out)} alt="arrow" />
               </td>
               <td className={styles.num}>{getTimeFromDateTime(item.date)}</td>
               <td className={styles.td}>
@@ -70,9 +70,7 @@ export const Table = ({ in_out }: { in_out: number }) => {
               </td>
               <td className={styles.num}>{formatPhoneNumber(item.from_number)}</td>
               <td>{item.source}</td>
-              <td>
-                <Score score="Отлично" />
-              </td>
+              <td>{item.time > 0 ? <Score score="Отлично" /> : null}</td>
               <td
                 style={{
                   textAlign: 'right',
@@ -80,14 +78,16 @@ export const Table = ({ in_out }: { in_out: number }) => {
                 }}
                 className={styles.num}
               >
-                {hoveredItemId === item.id ? (
+                {hoveredItemId === item.id && item.time > 0 ? (
                   <AudioPlayer
                     time={item.time}
                     record={item.record}
                     partnership_id={item.partnership_id}
                   />
-                ) : (
+                ) : item.time > 0 ? (
                   formatTime(item.time)
+                ) : (
+                  ''
                 )}
               </td>
             </tr>

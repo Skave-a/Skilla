@@ -7,10 +7,20 @@
   padding: 13px 0 15px;
   position: relative;
   padding-right: 17px;
+  border: none;
+  
+  &:hover {
+    transition: all 0.3s ease-in-out;
+    background: #0024cb;
+  }
 }
 
 .skillaBtnIcon {
   position: absolute;
   top: 14px;
   right: 21px;
+}
+
+.skillaBtn:first-child {
+  padding-right: 39px;
 }

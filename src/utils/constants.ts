@@ -188,6 +188,6 @@ export const TABLE_HEADERS = [
   {
     id: 6,
     title: 'Длительность',
-    width: '380px',
+    width: '330px',
   },
 ];

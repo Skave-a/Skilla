@@ -1,5 +1,4 @@
 import callIn from '@/assets/icons_table/callIN.svg';
-import callOut from '@/assets/icons_table/callOut.svg';
 import callMiss from '@/assets/icons_table/callMiss.svg';
 
 export function getTimeFromDateTime(dateTimeStr: string): string {
@@ -41,11 +40,10 @@ export function formatTime(seconds: number): string {
   return `${formattedMinutes}:${formattedSeconds}`;
 }
 
-export function getArrowImage(status: string): string {
-  if (status === 'Дозвонился') {
+export function getArrowImage(status: number) {
+  if (status === 0) {
     return callIn;
-  } else if (status === 'Не дозвонился') {
+  } else if (status === 1) {
     return callMiss;
   }
-  return callOut;
 }
