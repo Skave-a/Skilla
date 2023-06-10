@@ -126,16 +126,16 @@ export const FILTERS = [
     title: 'Все звонки',
     menu: [
       {
-        title: 'Все звонки',
-        id: 2,
+        label: 'Все звонки',
+        value: 2,
       },
       {
-        title: 'Входящие',
-        id: 0,
+        label: 'Входящие',
+        value: 0,
       },
       {
-        title: 'Исходящие',
-        id: 1,
+        label: 'Исходящие',
+        value: 1,
       },
     ],
   },
