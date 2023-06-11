@@ -1,0 +1,22 @@
+.playerControls {
+  height: 48px;
+  background: #eaf0fa;
+  border-radius: 48px;
+  display: flex;
+  align-items: center;
+}
+
+.progressContainer {
+  content: '';
+  background: #adbfdf;
+  border-radius: 50px;
+  height: 4px;
+  width: 164px;
+}
+
+.btnPlayer {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  margin-right: 8px;
+}

@@ -1,0 +1,21 @@
+.dots {
+  display: inline-flex;
+  gap: 2px;
+  width: 36px;
+}
+
+.dot {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.text {
+  font-family: 'SF Pro Display', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  padding: 4px 8px;
+}

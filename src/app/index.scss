@@ -1,0 +1,78 @@
+@use './styles/var';
+@use './styles/normalize';
+@use './styles/main';
+@import url('https://fonts.cdnfonts.com/css/sf-pro-display');
+
+a:active,
+a:hover,
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.container {
+  width: 1445px;
+}
+
+#root {
+  background: #f1f4f9;
+}
+
+li {
+  list-style-type: none;
+}
+
+ul {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+p {
+  margin: 0;
+}
+
+input[type='checkbox'] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  border-color: #adbfdf;
+  border-radius: 2px;
+  border-width: 2px;
+  outline: none;
+  cursor: pointer;
+}
+
+input[type='checkbox']:checked:before {
+  content: '\2714';
+  display: block;
+  text-align: center;
+  line-height: 16px;
+  font-size: 14px;
+  color: white;
+  background: rgba(212, 223, 243, 0.17);
+}
+
+th {
+  text-align: left;
+}
+
+select {
+  border: none;
+  outline: none;
+  background: inherit;
+  font-family: 'SF Pro Display', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 148%;
+  color: #5e7793;
+  opacity: 0.87;
+  cursor: pointer;
+
+  &:hover {
+    transition: all 0.3s ease-in-out;
+    color: #002cfb;
+    opacity: 0.87;
+  }
+}
