@@ -1,9 +1,9 @@
-import { BlockAnalytics } from "@/copmonents"
+import { BlockAnalytics } from '@/copmonents';
 
 export const CallAnalytics = () => {
   return (
     <div>
       <BlockAnalytics />
     </div>
-  )
-}
+  );
+};

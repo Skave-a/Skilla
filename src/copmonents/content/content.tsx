@@ -18,10 +18,10 @@ export const Content = () => {
           <object type="image/svg+xml" data={plus} className={styles.plus} />
         </button>
         <div className={styles.blockDays}>
-          <img src={left} alt="left" style={{marginRight: '12px'}}/>
-          <img src={calendar} alt="calendar" style={{marginRight: '9px'}}/>
+          <img src={left} alt="left" style={{ marginRight: '12px' }} />
+          <img src={calendar} alt="calendar" style={{ marginRight: '9px' }} />
           <DropdownDays />
-          <img src={right} alt="right" style={{marginRight: '5px'}}/>
+          <img src={right} alt="right" style={{ marginRight: '5px' }} />
         </div>
       </div>
       <Filters setCalls={setCalls} />

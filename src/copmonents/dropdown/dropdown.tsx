@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import styles from './dropdown.module.scss';
-import dropdownImg from '@/assets/icons/dropdown2.svg';
+import { Dropdown2 } from '@/assets/icons/dropdown2';
 
 interface DropdownProps {
   options: {
@@ -42,9 +42,11 @@ export function Dropdown(props: DropdownProps) {
 
   return (
     <div ref={dropdownRef} className={styles.dropdown}>
-      <div className={styles.dropdownToggle} onClick={() => setIsOpen(!isOpen)}>
+      <div className={`${styles.dropdownToggle} drToggle`} onClick={() => setIsOpen(!isOpen)}>
         {selectedOption.label}
-        <img src={dropdownImg} alt="dropdownImg" />
+        <div className={isOpen ? 'rotate' : ''}>
+          <Dropdown2 />
+        </div>
       </div>
       {isOpen && (
         <ul className={styles.dropdownMenu}>

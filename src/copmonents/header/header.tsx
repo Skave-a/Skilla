@@ -1,8 +1,8 @@
 import { CallAnalytics } from '@/copmonents';
 import styles from './header.module.scss';
-import search from '@/assets/icons/search.svg';
 import keyDown from '@/assets/icons/keyboard_arrow_down_black_24dp 1.svg';
 import avatar from '@/assets/icons/avatar.png';
+import { Search } from '@/assets/icons/search';
 
 export const Header = () => {
   const date: Date = new Date();
@@ -15,8 +15,8 @@ export const Header = () => {
       <div className={`${styles.headerContainer}  container`}>
         <p className={styles.date}>{dateToday}</p>
         <CallAnalytics />
-        <img src={search} alt="search" className={styles.search} />
-        <div className={styles.search}>
+        <div className="search">
+          <Search />
         </div>
         <div className={styles.userBlock}>
           <p className={styles.user}>ИП Сидорова Александра Михайловна</p>

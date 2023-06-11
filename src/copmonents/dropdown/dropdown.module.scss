@@ -11,7 +11,7 @@
   border-radius: 4px;
 
   top: 11px;
-  right: 0;
+  right: 5px;
 }
 
 .dropdownMenuItem {
@@ -23,13 +23,23 @@
   color: #899cb1;
   padding: 10px 0 10px 20px;
   width: 204px;
-  background: #fffff;
+  background: #ffffff;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
 
+  &:first-child,
+  &:first-child:hover {
+    color: #002cfb;
+    border-radius: 3px 3px 0 0;
+  }
+
+  &:last-child {
+    border-radius: 0 0 3px 3px;
+  }
+
   &:hover {
     background: rgba(0, 44, 251, 0.13);
-    color: #002cfb;
+    color: #122945;
   }
 }
 
