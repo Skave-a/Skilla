@@ -17,6 +17,15 @@
   display: flex;
   color: #899cb1;
   align-items: center;
+
+  &:hover,
+  &:focus {
+    border-color: #ffffff;
+    outline: none;
+    .balance {
+      color: #005ff8;
+    }
+  }
 }
 
 .title {
@@ -31,6 +40,7 @@
   color: #122945;
   margin-right: 10px;
   white-space: nowrap;
+  transition: all 0.3s ease-in-out;
 }
 
 .blockDays {
@@ -45,18 +55,6 @@
 .object > svg {
   color: red;
 }
-
-// .days {
-//   color: #005ff8;
-//   font-family: 'SF Pro Display', sans-serif;
-//   font-size: 14px;
-//   font-weight: 400;
-//   line-height: 16px;
-//   letter-spacing: 0em;
-//   width: 52px;
-//   margin-left: 7px;
-//   margin-top: 4px;
-// }
 
 .balanceT {
   margin-left: -5px;

@@ -237,5 +237,5 @@ export const TABLE_DATA = [
   {
     label: <Calendar />,
     value: 0,
-  }
+  },
 ];

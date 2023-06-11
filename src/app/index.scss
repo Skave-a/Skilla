@@ -76,3 +76,31 @@ select {
     opacity: 0.87;
   }
 }
+
+.search {
+  cursor: pointer;
+  margin: auto 0;
+  &:hover {
+    .searchSvg {
+      transition: all 0.3s ease-in-out;
+      fill: #002cfb;
+    }
+  }
+}
+
+.drToggle {
+  &:hover {
+    .dropdown2 {
+      transition: all 0.3s ease-in-out;
+      fill: #002cfb;
+    }
+  }
+}
+
+.rotate {
+  transform: rotate(180deg);
+  margin-top: -8px;
+  .dropdown2 {
+    fill: #002cfb;
+  }
+}

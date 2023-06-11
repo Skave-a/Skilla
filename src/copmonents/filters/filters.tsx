@@ -11,15 +11,9 @@ export const Filters = ({ setCalls }: { setCalls: (value: number) => void }) => 
         <p className={styles.search}>Поиск по звонкам</p>
       </div>
       <div className={styles.blockFilters}>
-        {FILTERS.map((filter) =>
-          // filter.menu ? (
-            <Dropdown key={filter.id} options={filter.menu} setCalls={setCalls}/>
-          // ) : (
-          //   <select key={filter.id}>
-          //     <option value={filter.title}>{filter.title}</option>
-          //   </select>
-          // )
-        )}
+        {FILTERS.map((filter) => (
+          <Dropdown key={filter.id} options={filter.menu} setCalls={setCalls} />
+        ))}
       </div>
     </div>
   );

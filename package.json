@@ -16,7 +16,8 @@
     "lint:fix": "eslint ./src --ext ts,tsx --fix",
     "preview": "vite preview",
     "prepare": "husky install",
-    "lintstaged": "lint-staged --relative"
+    "lintstaged": "lint-staged --relative",
+    "format": "prettier --write ."
   },
   "lint-staged": {
     "*.ts": [
