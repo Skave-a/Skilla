@@ -4,7 +4,8 @@ import play from '@/assets/player/play.svg';
 import pause from '@/assets/player/pause.svg';
 import { useEffect, useRef, useState } from 'react';
 import { getCallRecordAudio } from '../../app/api/api';
-import downl from '@/assets/player/downl.svg';
+import { Download } from '@/assets/icons/download';
+import { BtnClose } from '@/assets/icons/btnСlose';
 
 export const AudioPlayer = ({
   time,
@@ -60,7 +61,14 @@ export const AudioPlayer = ({
           style={{ width: `${currentTime}%`, backgroundColor: '#002CFB' }}
         />
       </div>
-      <img src={downl} alt="downl" />
+      <div className={styles.btns}>
+        <div className={styles.hover}>
+          <Download />
+        </div>
+        <div className={styles.hover}>
+          <BtnClose />
+        </div>
+      </div>
     </div>
   );
 };

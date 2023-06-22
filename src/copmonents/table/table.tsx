@@ -70,11 +70,10 @@ export const Table = ({ in_out }: { in_out: number }) => {
               </td>
               <td className={styles.num}>{formatPhoneNumber(item.from_number)}</td>
               <td>{item.source}</td>
-              <td>{item.time > 0 ? <Score score="Отлично" /> : null}</td>
+              <td className={styles.err}>{item.errors[0]}</td>
               <td
                 style={{
                   textAlign: 'right',
-                  paddingRight: '45px',
                 }}
                 className={styles.num}
               >

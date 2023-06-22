@@ -24,7 +24,7 @@ export const Content = () => {
           <img src={right} alt="right" style={{ marginRight: '5px' }} />
         </div>
       </div>
-      <Filters setCalls={setCalls} />
+      <Filters setCalls={setCalls} calls={calls} />
       <Table in_out={calls} />
     </div>
   );

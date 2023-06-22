@@ -1,0 +1,22 @@
+.date {
+  color: #adbfdf;
+  font-size: 14px;
+  line-height: 28px;
+  display: flex;
+
+  input {
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    line-height: 28px;
+    color: #122945;
+    width: 55px;
+
+    &::placeholder {
+      color: #adbfdf;
+      font-size: 14px;
+      line-height: 28px;
+    }
+  }
+}
