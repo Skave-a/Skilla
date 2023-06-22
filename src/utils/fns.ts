@@ -24,10 +24,10 @@ export function formatPhoneNumber(phoneNumber: string): string {
     return phoneNumber;
   }
   const countryCode = phoneNumber.slice(0, 1);
-  const areaCode = phoneNumber.slice(1, 3);
-  const firstPart = phoneNumber.slice(3, 6);
-  const secondPart = phoneNumber.slice(6, 8);
-  const thirdPart = phoneNumber.slice(8, 10);
+  const areaCode = phoneNumber.slice(1, 4);
+  const firstPart = phoneNumber.slice(4, 7);
+  const secondPart = phoneNumber.slice(7, 8);
+  const thirdPart = phoneNumber.slice(9, 11);
 
   return `+${countryCode} (${areaCode}) ${firstPart}-${secondPart}-${thirdPart}`;
 }

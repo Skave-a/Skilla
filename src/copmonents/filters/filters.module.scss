@@ -16,7 +16,6 @@
   gap: 32px;
   justify-content: space-between;
   margin-right: 3px;
-  // margin-bottom: 6px;
 }
 
 .filterSearch {
@@ -33,7 +32,6 @@
 }
 
 .search {
-  // white-space: nowrap;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 
@@ -62,9 +60,39 @@
     .searchL {
       left: 0px;
     }
-
-    // .blockFilters {
-    //   margin-bottom: 0;
-    // }
   }
+}
+
+.dropdownToggle {
+  outline: none;
+  background: inherit;
+  font-family: 'SF Pro Display', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 148%;
+  color: #5e7793;
+  opacity: 0.87;
+  cursor: pointer;
+
+  display: flex;
+  gap: 4px;
+
+  &:hover {
+    transition: all 0.3s ease-in-out;
+    color: #002cfb;
+    opacity: 0.87;
+  }
+}
+
+.hover {
+  display: flex;
+  gap: 5px;
+}
+
+.hover:hover path {
+  fill: #002cfb;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  gap: 5px;
 }

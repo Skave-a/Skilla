@@ -13,4 +13,5 @@ export interface ITableData {
   from_number: string;
   date: string;
   in_out: number;
+  errors: string[];
 }
