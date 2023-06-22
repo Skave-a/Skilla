@@ -4,6 +4,8 @@
   border-radius: 48px;
   display: flex;
   align-items: center;
+  width: 352px;
+  margin-left: auto;
 }
 
 .progressContainer {
@@ -19,4 +21,16 @@
   height: 24px;
   border-radius: 50%;
   margin-right: 8px;
+}
+
+.btns {
+  display: flex;
+  gap: 22px;
+  margin-right: 21px;
+  margin-top: 7px;
+}
+
+.hover:hover path {
+  fill: #002cfb;
+  transition: all 0.3s ease-in-out;
 }

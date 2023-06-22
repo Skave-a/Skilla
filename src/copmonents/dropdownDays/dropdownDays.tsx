@@ -13,7 +13,7 @@ export function DropdownDays() {
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   const handleOptionClick = (option: OptionsDropdown) => {
-    setSelectedOption(option);
+    option.value !== 0 ? setSelectedOption(option) : null;
     setIsOpen(false);
   };
 

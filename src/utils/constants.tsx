@@ -207,13 +207,13 @@ export const TABLE_HEADERS = [
   {
     id: 5,
     title: 'Оценка',
-    width: '212px',
+    width: '160px',
     p2: '150px',
   },
   {
     id: 6,
     title: 'Длительность',
-    width: '330px',
+    width: '386px',
   },
 ];
 

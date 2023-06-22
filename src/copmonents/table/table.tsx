@@ -74,7 +74,6 @@ export const Table = ({ in_out }: { in_out: number }) => {
               <td
                 style={{
                   textAlign: 'right',
-                  paddingRight: '45px',
                 }}
                 className={styles.num}
               >

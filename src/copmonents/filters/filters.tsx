@@ -8,7 +8,7 @@ export const Filters = ({ setCalls }: { setCalls: (value: number) => void }) => 
     <div className={styles.blockFilters}>
       <div className={styles.filterSearch}>
         <img src={search} alt="search" className={styles.searchL} />
-        <p className={styles.search}>Поиск по звонкам</p>
+        <input type="text" className={styles.search} placeholder="Поиск по звонкам"></input>
       </div>
       <div className={styles.blockFilters}>
         {FILTERS.map((filter) => (
