@@ -1,14 +1,35 @@
 .blockAnalytics {
   display: flex;
   gap: 57px;
-  width: 791px;
+  // width: 791px;
+
+  @media (max-width: 1504px) {
+    gap: 30px;
+  }
 }
 
+.item {
+  @media (max-width: 1350px) {
+    &:last-child {
+      display: none;
+    }
+  }
+  @media (max-width: 1150px) {
+    &:nth-child(2) {
+      display: none;
+    }
+  }
+}
+@media (max-width: 900px) {
+  .item {
+    display: none;
+  }
+}
 .progressLine {
   content: '';
   background-color: #dee6f5;
   height: 6px;
-  width: 156px;
+  // width: 156px;
   border-radius: 12px;
   position: absolute;
 }
@@ -20,5 +41,6 @@
   font-size: 14px;
   line-height: 148%;
   color: #122945;
-  margin-bottom: 7px;
+  // margin-bottom: 7px;
+  white-space: nowrap;
 }

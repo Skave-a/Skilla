@@ -5,7 +5,7 @@ export const BlockAnalytics = () => {
   return (
     <div className={styles.blockAnalytics}>
       {CALL_ANALYTICS.map((item) => (
-        <div key={item.id}>
+        <div key={item.id} className={styles.item}>
           <p className={styles.title}>
             {item.text} <span style={{ color: item.color }}>{item.dedicatedText}</span>
           </p>
