@@ -1,7 +1,6 @@
 .blockAnalytics {
   display: flex;
   gap: 57px;
-  // width: 791px;
 
   @media (max-width: 1504px) {
     gap: 30px;
@@ -29,7 +28,6 @@
   content: '';
   background-color: #dee6f5;
   height: 6px;
-  // width: 156px;
   border-radius: 12px;
   position: absolute;
 }
@@ -41,6 +39,5 @@
   font-size: 14px;
   line-height: 148%;
   color: #122945;
-  // margin-bottom: 7px;
   white-space: nowrap;
 }
