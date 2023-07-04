@@ -9,7 +9,7 @@ import {
 } from '@/utils';
 import styles from './table.module.scss';
 import { getCalls } from '@/app/api/api';
-import { AudioPlayer, Score } from '@/copmonents';
+import { AudioPlayer } from '@/copmonents';
 
 export const Table = ({ in_out }: { in_out: number }) => {
   const [calls, setCalls] = useState<ITableData[]>();
